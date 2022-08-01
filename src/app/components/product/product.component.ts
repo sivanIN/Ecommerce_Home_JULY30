@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { EcommerceAppService } from 'src/app/services/ecommerce-app.service';
 import { Product } from 'src/app/product';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-product',
@@ -9,9 +12,12 @@ import { Product } from 'src/app/product';
 })
 export class ProductComponent implements OnInit {
 
+  
+
+  product:Product
   products : Product[] 
 
-  constructor(private ecomservice:EcommerceAppService) { }
+  constructor(private ecomservice:EcommerceAppService,private route:Router) { }
 
 
   ngOnInit(): void {
@@ -25,5 +31,30 @@ export class ProductComponent implements OnInit {
     this.products = data
     })
   }
+
+  // open(id:number){
+  //   this.route.navigateByUrl("/modal/" + id)
+  // }
+
+
+  open(id:number){
+     
+     if(id > 0){
+       this.ecomservice.getProductById(id).subscribe(data => {this.product = data
+       
+       console.log(data)
+       })
+     }
+   }
+
+   addCart(id:number){
+
+    this.route.navigateByUrl("/cart/" + id )
+   
+   }
+
+
+
+
 
 }

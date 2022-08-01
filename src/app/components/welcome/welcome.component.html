@@ -1,10 +1,41 @@
-<p style="text-align: center;">Welcome to Ecommerce App</p>
 
-<div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Lulu Fashion</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+         
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/newproduct">Add product</a>
+          </li>
 
-    <a class="btn btn-info" routerLink="product" style="margin-right: 20px;">Product  Details</a>
-    <a class="btn btn-info" routerLink="newcategory" >Add Product Category</a>
-   
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/newcategory">Add product Category</a>
+          </li>
 
-</div>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/product">Fashion</a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner" style="margin-top: 10px;">
+      <div class="carousel-item active">
+        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/July2022GW/New_FST_Icons/Apay_ICICI/Shoes_Revised/shoes-pc-1_3000x._CB630274593_.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/MI/Under1499_Tallhero_3000x1200._CB634138928_.jpg" class="d-block w-100"  alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images-na.ssl-images-amazon.com/images/G/31/img22/Fashion/Event/Augart22/Ingress/Ingress-1242x450unrec._CB630509744_.gif" class="d-block w-100" alt="...">
+      </div>
+    </div>
+  </div>
 
